@@ -3,6 +3,8 @@ import subprocess
 import requests
 import sys
 
+
+
 token = sys.argv[1]
 
 bot = discord.Client()
@@ -12,20 +14,18 @@ xxx = token
 
 @bot.event
 async def on_message(message):
-    if message.author.id == '330425251886530581' or message.author.id == '431533282652585995':  # moi Ayari
+    if message.author.id == bot.user.id or  message.author.id == '330425251886530581':
         args = message.content.split()[1:]
         cmd = message.content.split()[0]
 
         if cmd == "!spam":
-            if len(args) > 2:
-                await bot.send_message(message.channel, "erreur: il y a trop d'arguments la mek la syntaxe c'est !spam <invite ser> <id chan>")
-            elif len(args) < 2:
-                await bot.send_message(message.channel, "erreur: il y a pas assez d'arguments la mek la syntaxe c'est !spam <invite ser> <id chan>")
+            if len(args) != 3:
+                await bot.send_message(message.channel, "erreur: il y a des couilles dans les arguments la mek la syntaxe c'est !spam <invite ser> <id chan> <nb msg>")
             else:  # tout est bon(theoriquement)
                 try:
                     await bot.send_message(message.channel, "reçu, lancement des bots...")
                     subprocess.Popen(
-                        ["python", "kyspam.py", args[0], args[1]], shell=True)
+                        ["python", "kyspam.py", args[0], args[1], args[2]], shell=True)
                 except:
                     await bot.send_message(message.channel, "erreur: il y a eu une couille lors du lancement jsp ce que t'as fait mec")
 

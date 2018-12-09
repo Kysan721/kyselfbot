@@ -13,18 +13,13 @@ def genRandomStr(charNb=6):
     return stringbuilder
 
 
-"""      a faire pour que les bots join automatiquement le serv
-if server != None:
-    await kysbot.accept_invite('instant-invite-code')
-"""
-
 
 kysbot = discord.Client()  # on crée le bot pertinance /45
 
 # token qui lui sera passé en argument par l'autre programme
 _OO0OO0000 = sys.argv[1]
 _OO0O0O000 = sys.argv[2]
-nombre_message = sys.argv[3]
+nombre_message = int(sys.argv[3])
 chan = ""# id du chan sur lequel spam
 local_token = ""
 data = {}
@@ -42,7 +37,7 @@ async def on_ready():
     print("de token: " + local_token)
     print("sur le channel: " + chan)
     print('-----------------')
-    
+
     counter = 0
     while counter < nombre_message:
         # on spam
