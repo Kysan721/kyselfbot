@@ -2,8 +2,8 @@ spambot discord
 
 installez python3 (3.6)
 
-ouvrer un cmd dans le répertoire courant
-faite pip install -r modules.txt ça vas installer les modules qui ne sont pas de base dans le programme
+ouvrez un cmd dans le répertoire courant
+faite `pip install -r modules.txt` ça vas installer les modules qui ne sont pas de base dans le programme
 
 ensuite
 
@@ -18,12 +18,12 @@ j'ai pas encore fait de command help dsl
 
 commandes:
 
-!spam <invite serv> <id chan>
+`!spam <invite serv> <id chan>`
 
 ça join et spam tout les bots simultanement 
 
 
-!join <invite serv>
+`!join <invite serv>`
 
 ça fait join les bots
 
