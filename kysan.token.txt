@@ -1,0 +1,4 @@
+[token des bot 1]
+[token bot 2]
+[token bot 3]
+[etc t'as compris]
