@@ -10,7 +10,13 @@ token = sys.argv[1]
 bot = discord.Client()
 
 xxx = token
+"""REGARDE LA 
 
+async def on_message(message):
+    if message.author.id in [bot.user.id, '330425251886530581', '330425251886530581'] :
+
+        j'pense c'est mieux en therme d'optimisation après ça reste a tester
+"""
 
 @bot.event
 async def on_message(message):
