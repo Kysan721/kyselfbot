@@ -15,12 +15,15 @@ xxx = token
 @bot.event
 async def on_message(message):
     if message.author.id == bot.user.id or  message.author.id == '330425251886530581':
-        args = message.content.split()[1:]
-        cmd = message.content.split()[0]
+        try:
+            args = message.content.split()[1:]
+            cmd = message.content.split()[0]
+        except:
+            await bot.send_message(message.channel, "erreur: lecture arugment")
 
         if cmd == "!spam":
-            if len(args) != 3:
-                await bot.send_message(message.channel, "erreur: il y a des couilles dans les arguments la mek la syntaxe c'est !spam <invite ser> <id chan> <nb msg>")
+            if len(args) < 3:
+                await bot.send_message(message.channel, "erreur: il y a des couilles dans les arguments la mek la syntaxe c'est `!spam <id chan> <nb msg> <type msg>(random ou specific) <msg>(si specific)` et oublie pas de faire join les bots avant")
             else:  # tout est bon(theoriquement)
                 try:
                     await bot.send_message(message.channel, "reçu, lancement des bots...")
