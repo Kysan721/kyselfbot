@@ -87,7 +87,7 @@ def main(args, msg):
 
 if __name__ == '__main__':
     if len(sys.argv) >= 4 + 1:
-        main(sys.argv[1:5], sys.args[5:])
+        main(sys.argv[1:5], sys.argv[5:])
     else:
         print('probleme dans les arguments')
         pass
