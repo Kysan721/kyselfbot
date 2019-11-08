@@ -11,7 +11,7 @@ mettez vos token pour les spambots dans le fichier "kysan.token"
 
 ouvrez un cmd dans le répertoire courant ou ce trouve le script kyselfbot.py
 
-tapez ensuite `python kyselfbot.py <votre token>` pour start votre self
+tapez ensuite `python kyselfbot.py <votre token>` pour lancer le selfbot
 
 
 j'ai pas encore fait de command help dsl
